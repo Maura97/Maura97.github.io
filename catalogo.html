@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<header>
+    <div class="header">
+        <div class="logo-container">
+            <img class="logo-image" src="img/logo1.png">
+        </div>
+        <ul class="menu-container">
+            <li class="menu-option"><a href="index.html" class="opcion-menu">Inicio</a></li>
+            <li class="menu-option"><a href="catalogo.html" class="opcion-menu">Catálogo</a></li>
+            <li class="menu-option"><a href="form.html" class="opcion-menu">Contacto</a></li>
+            <li class="menu-option">
+                <div class="buscar-container">
+                    <input class="buscar"></input>
+                    <button class="buscar-button">Buscar</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="body-container">
+            <span class="catalog-title">!Explora todas las novedades de nuestro catálogo!</span>
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent('content-frutales', 'icon-frutales')">
+                    <div class="title-icon-container">
+                        <img class="icon-catalogo" src="img/fresa.png" alt="">
+                        <span class="title-collapsible">Velas Frutales</span>
+                    </div>
+                    <span id="icon-frutales" class="icon-collapsible">+</span>
+                </div>
+                <div id="content-frutales" class="content hidden">
+
+                    <div class="types-container">
+                        <div>
+                            <span class="title-type-container">Cítricas</span>
+                            <ul>
+                                <li>Limón</li>
+                                <li>Naranja</li>
+                                <li>Pomelo</li>
+                                <li>Mandarina</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="title-type-container">Berries</span>
+                            <ul>
+                                <li>Fresa</li>
+                                <li>Frambuesa</li>
+                                <li>Mora</li>
+                                <li>Arándano</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="title-type-container">Tropicales</span>
+                            <ul>
+                                <li>Piña</li>
+                                <li>Mango</li>
+                                <li>Coco</li>
+                                <li>Papaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent('content-florales', 'icon-florales')">
+                    <div class="title-icon-container">
+                        <img class="icon-catalogo" src="img/tulipan.png" alt="">
+                        <span class="title-collapsible">Velas Florales</span>
+                    </div>
+                    <span id="icon-florales" class="icon-collapsible">+</span>
+                </div>
+                <div id="content-florales" class="content hidden">
+
+                    <div class="types-container">
+                        <div>
+                            <span class="title-type-container">Flores clásicas</span>
+                            <ul>
+                                <li>Rosa</a></li>
+                                <li>Jazmin</li>
+                                <li>Lavanda</li>
+                                <li>Lirio</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="title-type-container">Flores tropicales</span>
+                            <ul>
+                                <li>Gardenia</li>
+                                <li>Plumeria </li>
+                                <li>Tiaré</li>
+                                <li>Orquídea</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible-container">
+                <div class="collapsible" onclick="showContent('content-valentin', 'icon-valentin')">
+                    <div class="title-icon-container">
+                        <img class="icon-catalogo" src="img/corazon.png" alt="">
+                        <span class="title-collapsible">San Valentín</span>
+                    </div>
+                    <span id="icon-valentin" class="icon-collapsible">+</span>
+                </div>
+                <div id="content-valentin" class="content hidden">
+                    <div class="types-container">
+                        <div>
+                            <span class="title-type-container">Colección de "Amor"</span>
+                            <ul>
+                                <li>Velas con mensaje</a></li>
+                                <li>Velas con glitter o brillo</li>
+                                <li>Velas en forma de corazón</li>
+                                <li>Velas con aceites esenciales</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="title-type-container">Colección "Noche de citas"</span>
+                            <ul>
+                                <li>Velas de pareja</li>
+                                <li>Velas para spa en casa </li>
+                                <li>Velas aromáticas para relajación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id, icon) {
+            var content = document.getElementById(id);
+            var icon = document.getElementById(icon);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = "-";
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = "+";
+            }
+        }
+    </script>
+</body>
+
+<footer>
+    <div class="footer">2025 © Todos los derechos reservados</div>
+</footer>
+
+</html>
